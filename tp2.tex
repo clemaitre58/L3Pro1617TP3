@@ -1,0 +1,73 @@
+\documentclass[12pt]{tdtp}
+\usepackage{tabularx,colortbl}
+\usepackage{multirow}
+\usepackage{listings}
+\lstset{
+	language=VHDL,
+basicstyle=\tiny\ttfamily}
+\definecolor{light-gray}{gray}{0.96}
+\definecolor{pageheading-gray}{gray}{0.2}
+\definecolor{dark-gray}{gray}{0.45}
+\definecolor{dark-green}{rgb}{0.245,0.121,0.0}
+
+\newcommand{\auteur}{Cedric Lemaitre}
+\newcommand{\couriel}{c.lemaitre58@gmail.com}
+\newcommand{\promo}{L3 Pro Robotique}
+\newcommand{\annee}{2017-2018}
+\newcommand{\matiere}{Traitement M3.1}
+
+\newcommand{\tdtp}{TP 2}
+\renewcommand{\sujet}{Caractérisation d'images}
+
+
+\begin{document}
+\titre
+Ce TP propose de réaliser la phase d'acquisition et la caractérisation des données d'un système décisionnel basé sur l'image comme information caractéristique\\
+\\
+\\
+\\\
+
+%%%%%%%%%%%
+\Exo
+
+Nous devons dans un premier temps créer une base d'apprentissage. Pour cela il est nécessaire de réaliser l'acquisition d'objet.
+
+Nous considérons 3 de vos objets usuels (par exemple un smartphone, un stylo, une clé).
+
+Prenez \textbf{individuellement} chaque objet en photo à l'aide de votre smartphone.
+
+Pour chaque objet, prenez une dizaine de photos selon différents points de vue.
+
+Importer ces images dans votre répertoire personnel.
+
+Répartissez les images dans 3 répertoires spécifiques, c'est à dire un répertoire par objet.
+
+
+%%%%%%%%%%%%
+\Exo
+
+Nous allons procéder à la caractérisation des objets.
+
+Pour cela, un jeu de caractéristiques sera calculé pour chaque image.
+
+A l'aide de la librairie \textit{scikit-image}, nous avons procédé (pour une seule image) de la manière suivante :
+
+\begin{enumerate}
+	\item ouvrir l'image à l'aide de la fonction \textit{imread}
+	\item calculer la valeur moyenne et l'écart type des quantités suivantes: $C_1 = \frac{G}{R+G+B}$, $C_2 = \frac{B}{R+G+B}$  et $C_1 = \frac{R+G+B}{3*255}$ 
+\end{enumerate}
+
+%%%%%%%%%%%
+\Exo 
+
+Modifier votre script pour que le calcul des caractéristiques précédentes soit réalisé sur l'ensemble des image.
+
+Pour cela, utiliser la librairie \textbf{os} et en particulier la fonction \textbf{walk}
+
+Stocker dans les résultats dans 2 matrices $X$ et $Y$. 
+
+Chaque ligne de $X$ contient les caractéristiques d'une image. Chaque ligne de $Y$ contient le label d'appartenance d'une image.
+\\
+\textbf{NB : il est crucial que les données dans $X$ et $Y$ respecte le même ordre}
+
+\end{document}
