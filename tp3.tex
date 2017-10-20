@@ -1,0 +1,47 @@
+\documentclass[12pt]{tdtp}
+\usepackage{tabularx,colortbl}
+\usepackage{multirow}
+\usepackage{listings}
+\lstset{
+	language=VHDL,
+basicstyle=\tiny\ttfamily}
+\definecolor{light-gray}{gray}{0.96}
+\definecolor{pageheading-gray}{gray}{0.2}
+\definecolor{dark-gray}{gray}{0.45}
+\definecolor{dark-green}{rgb}{0.245,0.121,0.0}
+
+\newcommand{\auteur}{Cedric Lemaitre}
+\newcommand{\couriel}{c.lemaitre58@gmail.com}
+\newcommand{\promo}{L3 Pro Robotique}
+\newcommand{\annee}{2017-2018}
+\newcommand{\matiere}{Traitement M3.1}
+
+\newcommand{\tdtp}{TP 3}
+\renewcommand{\sujet}{Outils décisionnels}
+
+
+\begin{document}
+\titre
+Ce TP propose de réaliser la phase d'entrainement de l'outil décisionnel ainsi que la phase de test\\
+\\
+\\
+\\\
+
+%%%%%%%%%%%
+\Exo
+
+À partir des données que vous avez créé lors du Tp3, vous devez réaliser l'entrainement d'un classifieur SVM.
+Pour cela, vous devez utiliser la librairie scikit-learn dont vous trouverez la documentation sur internet.
+Vous devez utiliser en particulier la fonctionnalité SVC, la fonctionnalité \textit{train} (entraimenent) et \textit{predict}.
+
+%%%%%%%%%%%%
+\Exo
+
+Réaliser le même travail pour l'outil décisionnel \textbf{boosting}.
+Réaliser la validation cette fois-ci en validation croisée (\textit{cross-validation}
+
+%%%%%%%%%%%
+\Exo 
+
+Refaite les 3 premiières questions en utilisant l'outil SIFT pour caractériser vos images
+\end{document}
